@@ -106,7 +106,7 @@ const RESTController = {
       }
       let handled = false;
 
-      const xhr = new XHR();
+      const xhr = new XHR({ rejectUnauthorized: false });
       xhr.onreadystatechange = function () {
         if (xhr.readyState !== 4 || handled || xhr._aborted) {
           return;
